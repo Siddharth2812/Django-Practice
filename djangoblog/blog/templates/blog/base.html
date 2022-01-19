@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sid's blog</title>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+        <a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="container">
+                <h1><a href="/">Django Girls Blog</a></h1>
+            </div>
+        </header>
+        <main class="container">
+    <div class="row">
+        <div class="col">
+            {% for post in posts %}
+                <article class="post">
+                    {%block content%}
+                    {% endblock %}
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+        <article>
+            <h2><a href="">My first post</a></h2>
+            <p>Hello I'm Siddharth Reddy of S1 ELC, This is my first blog post using the django framework. I'm a member of <a href='https://amfoss.in/members/' target='_blank' title="Amfoss web page">amFOSS.</a> <br>Just a student trying to find my way into the path of technology.</p>
+        </article>
+        <p> My github : <a href="http://www.github.com/Siddharth2812.html" target="_blank" title="Github Link"> Siddharth2812</a></p>
+
+        <h1 style="color:hsla(9,50%,74%,0.2)">NOICE</h1>
+    </body>
+</html>
